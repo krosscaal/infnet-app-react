@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import type {Pessoa, PessoaFormData} from "../../types/Pessoa.ts";
+import type { Pessoa, PessoaFormData } from "../../types/Pessoa.ts";
+import { Util } from "../utils/Util.ts";
 import { List } from "./Lista.tsx";
 import '../../assets/css/Formulario.css';
-import {Util} from "../utils/Util.ts";
 
 
 export function Formulario() {

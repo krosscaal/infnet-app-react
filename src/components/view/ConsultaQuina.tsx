@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
+import { Util } from "../utils/Util.ts";
 import type { QuinaData } from "../../types/QuinaData.ts";
 import '../../assets/css/ConsultaQuina.css';
-import {Util} from "../utils/Util.ts";
 
 export function ConsultaQuina() {
     const API_CAIXA = 'https://servicebus2.caixa.gov.br/portaldeloterias/api/quina';
@@ -97,13 +97,6 @@ export function ConsultaQuina() {
         })
     }
 
-    const formatCurrency = (value: number): string => {
-        return value.toLocaleString('pt-BR', {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-    };
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({
@@ -156,7 +149,7 @@ export function ConsultaQuina() {
                                     </ul>
                                     <h5 className="padding-10">Acumulado: {quinaData.acumulado ? 'Sim' : 'Não'}</h5>
                                     <h4 className="padding-10">Valor Estimado Próximo Concurso:
-                                        R$ {formatCurrency(quinaData.valorEstimadoProximoConcurso)}</h4>
+                                        R$ {Util.formatCurrency(quinaData.valorEstimadoProximoConcurso)}</h4>
                                 </div>
                             </div>
                         </div>
