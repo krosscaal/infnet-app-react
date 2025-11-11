@@ -1,4 +1,9 @@
+# AUTOR
+    Krossby Krossft
+
 # Projeto Quina - Cadastro de Jogadores
+
+    Projeto para a materia Desenvolvimento de Aplicações Interativas com React[25E4_2]
 
 Sistema web para cadastro e gerenciamento de jogadores da Quina, com consulta aos resultados dos sorteios através de API externa.
 
